@@ -1,11 +1,16 @@
 export class Product {
 
     constructor(
-        public readonly id: string,
-        public readonly name: string,
-        public readonly description: string,
-        public readonly price: number,
+        public  id: string,
+        public  name: string,
+        public  description: string,
+        public  price: number,
     ) {}
 
-    //Todo updateWith
+    updatewith({name, description, price}: {name?: string, description?: string, price?: number}) {
+        this.name = name ?? this.name;
+        this.description = description ?? this.description;
+        this.price = price ?? this.price;
+       
+    }
 }
